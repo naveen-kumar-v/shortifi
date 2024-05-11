@@ -5,7 +5,6 @@ import url from '../models/Url.js';
 export const getShortUrl = async (req, res) => {
   try {
     const body = req.body;
-    console.log("body : ", body);
     if (!body.url) {
       return res.status(400).json({
         success: false,
@@ -56,7 +55,7 @@ export const goToShortUrl = async (req, res) => {
     );
 
     if (!entry) {
-      console.log("No URL found for this shortId:", shortId);
+      // console.log("No URL found for this shortId:", shortId);
       return res.status(404).json({
         success: false,
         message: `No URL found for this shortId: ${shortId}`,

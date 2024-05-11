@@ -1,15 +1,18 @@
 import mongoose from "mongoose";
 
 const urlSchema = new mongoose.Schema({
-  url: {
-    type: String,
-    required: true,
-  },
   shortId: {
     type: String,
-    unique: true
-  }
-})
+    unique: true,
+    required: true
+  },
+  redirectUrl: {
+    type: String,
+    required: true
+  },
+  visitedHistory: [{ timestamp: { type: Number } }]
+},
+  { timestamps: true })
 
 const url = mongoose.model("url", urlSchema);
 

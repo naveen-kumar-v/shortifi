@@ -5,7 +5,7 @@ import url from '../models/Url.js';
 export const getShortUrl = async (req, res) => {
   try {
     const body = req.body;
-
+    console.log("body : ", body);
     if (!body.url) {
       return res.status(400).json({
         success: false,

@@ -3,7 +3,6 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { Copy, ExternalLink } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import logo from "../../public/logo-no-background.svg";
 
 const Index = () => {
   const [longUrl, setLongUrl] = useState("");
@@ -42,13 +41,6 @@ const Index = () => {
 
   return (
     <div className="w-full flex flex-col justify-center items-center">
-      <div className="w-full ps-10 py-6">
-        <img
-          src={logo}
-          alt="Shortifi logo"
-          className="transition-all w-[24svw] md:w-[16svw] lg:w-[12svw] h-fit "
-        />
-      </div>
       <div className="w-[80%] text-white flex flex-col gap-3">
         <div className="flex justify-center items-center flex-col md:flex-row gap-2">
           <h1 className="text-2xl md:text-3xl">Free URL Shortener </h1>{" "}
@@ -90,9 +82,9 @@ const Index = () => {
           >
             {loading ? (
               <div className="flex flex-row gap-2 w-full h-full justify-center items-center py-[8px]">
-                <div className="w-3 h-3 rounded-full bg-gray-300 animate-bounce [animation-delay:.3s]"></div>
-                <div className="w-3 h-3 rounded-full bg-gray-300 animate-bounce [animation-delay:.1s]"></div>
-                <div className="w-3 h-3 rounded-full bg-gray-300 animate-bounce [animation-delay:.3s]"></div>
+                <div className="w-2 h-2 rounded-full bg-gray-300 animate-bounce [animation-delay:.2s]"></div>
+                <div className="w-2 h-2 rounded-full bg-gray-300 animate-bounce [animation-delay:.1s]"></div>
+                <div className="w-2 h-2 rounded-full bg-gray-300 animate-bounce [animation-delay:.2s]"></div>
               </div>
             ) : (
               "Shorten URL"
